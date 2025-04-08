@@ -1,0 +1,16 @@
+Ce dossier doit contenir les images suivantes pour le site Café Équitable :
+
+1. logo.png - Logo de Café Équitable (une tasse de café)
+2. hero-bg.jpg - Image d'arrière-plan pour la section hero (plantation de café ou grains de café)
+3. engagement.jpg - Image illustrant l'engagement éthique (producteurs de café)
+4. cafe1.jpg à cafe6.jpg - Images des différents cafés proposés
+
+Vous pouvez utiliser des images libres de droits provenant de sites comme Unsplash, Pexels ou Pixabay.
+
+Exemples de recherches pour trouver des images appropriées :
+- "coffee cup logo" pour logo.png
+- "coffee plantation" ou "coffee beans" pour hero-bg.jpg
+- "coffee farmer" ou "fair trade coffee" pour engagement.jpg
+- "coffee packaging" ou "coffee beans" pour les images de café
+
+Assurez-vous que les images sont optimisées pour le web (taille raisonnable, format approprié) pour garantir des temps de chargement rapides.

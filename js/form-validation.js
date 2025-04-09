@@ -1,12 +1,7 @@
-/**
- * Script de validation du formulaire de contact
- * Ce script gère la validation en temps réel et à la soumission du formulaire
- */
-
 document.addEventListener('DOMContentLoaded', function() {
     const form = document.getElementById('contact-form');
     
-    // Fonction pour afficher les messages d'erreur
+   
     function showError(inputId, message) {
         const errorElement = document.getElementById(inputId + '-error');
         errorElement.textContent = message;
@@ -14,7 +9,7 @@ document.addEventListener('DOMContentLoaded', function() {
         document.getElementById(inputId).setAttribute('aria-invalid', 'true');
     }
     
-    // Fonction pour effacer les messages d'erreur
+    
     function clearError(inputId) {
         const errorElement = document.getElementById(inputId + '-error');
         errorElement.textContent = '';
@@ -22,12 +17,12 @@ document.addEventListener('DOMContentLoaded', function() {
         document.getElementById(inputId).removeAttribute('aria-invalid');
     }
     
-    // Validation à la soumission du formulaire
+    
     form.addEventListener('submit', function(event) {
         event.preventDefault();
         let isValid = true;
         
-        // Validation du nom
+       
         const name = document.getElementById('name');
         if (!name.value.trim()) {
             showError('name', 'Veuillez entrer votre nom.');
@@ -35,8 +30,7 @@ document.addEventListener('DOMContentLoaded', function() {
         } else {
             clearError('name');
         }
-        
-        // Validation de l'email
+    
         const email = document.getElementById('email');
         const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         if (!email.value.trim()) {
@@ -49,7 +43,7 @@ document.addEventListener('DOMContentLoaded', function() {
             clearError('email');
         }
         
-        // Validation du téléphone (optionnel mais doit être au bon format si renseigné)
+        
         const phone = document.getElementById('phone');
         const phoneRegex = /^[0-9]{10}$/;
         if (phone.value.trim() && !phoneRegex.test(phone.value)) {
@@ -59,7 +53,7 @@ document.addEventListener('DOMContentLoaded', function() {
             clearError('phone');
         }
         
-        // Validation du sujet
+        
         const subject = document.getElementById('subject');
         if (subject.value === '' || subject.selectedIndex === 0) {
             showError('subject', 'Veuillez sélectionner un sujet.');
@@ -68,7 +62,7 @@ document.addEventListener('DOMContentLoaded', function() {
             clearError('subject');
         }
         
-        // Validation du message
+      
         const message = document.getElementById('message');
         if (!message.value.trim()) {
             showError('message', 'Veuillez entrer votre message.');
@@ -80,7 +74,7 @@ document.addEventListener('DOMContentLoaded', function() {
             clearError('message');
         }
         
-        // Validation du consentement
+       
         const consent = document.getElementById('consent');
         if (!consent.checked) {
             showError('consent', 'Vous devez accepter le traitement de vos données pour envoyer le formulaire.');
@@ -89,20 +83,20 @@ document.addEventListener('DOMContentLoaded', function() {
             clearError('consent');
         }
         
-        // Si le formulaire est valide, simuler l'envoi et afficher le message de succès
+       
         if (isValid) {
-            // Cacher les messages d'erreur
+           
             document.getElementById('form-error').hidden = true;
             
-            // Simuler un envoi (à remplacer par un vrai envoi AJAX)
+            
             setTimeout(function() {
-                // Afficher le message de succès
+              
                 document.getElementById('form-success').hidden = false;
                 
-                // Réinitialiser le formulaire
+              
                 form.reset();
                 
-                // Cacher le message de succès après 5 secondes
+               
                 setTimeout(function() {
                     document.getElementById('form-success').hidden = true;
                 }, 5000);
@@ -113,11 +107,11 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
     
-    // Validation en temps réel pour chaque champ
+   
     const inputs = form.querySelectorAll('input, select, textarea');
     inputs.forEach(function(input) {
         input.addEventListener('blur', function() {
-            // Validation spécifique pour chaque type de champ
+           
             switch(input.id) {
                 case 'name':
                     if (!input.value.trim()) {

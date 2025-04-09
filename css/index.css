@@ -1,0 +1,62 @@
+/* body { 
+    margin: 0; 
+    font-family: Arial, sans-serif; 
+}
+header { 
+    background: #d7b693; 
+    padding: 0px; 
+    display: flex; 
+    align-items: center;
+    justify-content: space-around;
+
+
+}
+
+h1{
+    font-family: 'Klee One', cursive;
+}
+header div { 
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+
+}
+
+.logo{
+    width: 100px;
+    height: 100px;
+
+}
+
+.navmenu{
+    display: flex; 
+    justify-content: space-evenly; 
+    align-items: center;
+
+}
+
+.navmenu li{
+    list-style-type: none;
+    padding: 0 10px;
+}
+
+.navmenu a{
+    text-decoration: none;
+    color: black;
+    transition:all 0.3s;
+}
+
+.navmenu a:hover{
+    color: rgb(255, 0, 0);
+} */
+
+
+
+
+/* main */
+
+
+/* .imgProduit{
+    width: 100px;
+    height: 100px;
+} */

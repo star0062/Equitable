@@ -6,6 +6,7 @@
     <title>Café Équitable - Commerce équitable et éthique</title>
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="./css/header.css">
+    <link rel="stylesheet" href="./css/newsletter.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://cdn.materialdesignicons.com/7.3.67/css/materialdesignicons.min.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -190,29 +191,29 @@
         <section class="featured-products">
             <div class="container">
                 <h2>Nos produits phares</h2>
-                <div class="products-grid">
-                    <div class="product-card">
+                <ul class="products-grid">
+                    <li class="product-card">
                         <img src="./css/img/cafe1.jpg" alt="" aria-hidden="true">
                         <h3>Café d'Éthiopie</h3>
-                        <p>Notes fruitées et florales, torréfaction légère</p>
+                        <p>Notes fruitées et florales, torréfaction <br> légère</p>
                         <p class="product-price">12,90 €</p>
-                        <button class="btn- " >Ajouter au panier</button>
-                    </div>
-                    <div class="product-card">
+                        <button class="btn-secondary " >Ajouter au panier</button>
+                    </li>
+                    <li class="product-card">
                         <img src="./css/img/cafe2.jpg" alt="" aria-hidden="true">
                         <h3>Café de Colombie</h3>
                         <p>Arômes de caramel et de noisette, torréfaction moyenne</p>
                         <p class="product-price">11,50 €</p>
                         <button class="btn-secondary " >Ajouter au panier</button>
-                    </div>
-                    <div class="product-card">
+                    </li>
+                    <li class="product-card">
                         <img src="./css/img/cafe3.jpg" alt="" aria-hidden="true">
                         <h3>Café du Pérou</h3>
                         <p>Notes chocolatées et épicées, torréfaction foncée</p>
                         <p class="product-price">10,90 €</p>
                         <button class="btn-secondary " >Ajouter au panier</button>
-                    </div>
-                </div>
+                    </li>
+                </ul>
                 <div class="text-center">
                     <a href="nos-cafes.html" class="btn">Voir tous nos cafés</a>
                 </div>
@@ -224,8 +225,8 @@
         <section id="testimonials" class="testimonials">
             <div class="container">
                 <h2>Ce que nos clients disent</h2>
-                <div class="testimonials-grid">
-                    <div class="testimonial-card">
+                <ul class="testimonials-grid">
+                    <li class="testimonial-card">
                         <div class="testimonial-rating">
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
@@ -235,8 +236,8 @@
                         </div>
                         <p class="testimonial-content">"J'ai découvert Café Équitable il y a 6 mois et je ne peux plus m'en passer. Leurs cafés sont d'une qualité exceptionnelle et j'apprécie particulièrement leur engagement éthique."</p>
                         <p class="testimonial-author">- Sophie D.</p>
-                    </div>
-                    <div class="testimonial-card">
+                    </li>
+                    <li class="testimonial-card">
                         <div class="testimonial-rating">
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
@@ -246,8 +247,8 @@
                         </div>
                         <p class="testimonial-content">"En tant que torréfacteur amateur, je suis très exigeant sur la qualité des grains. Café Équitable propose des cafés verts d'exception, avec une traçabilité irréprochable."</p>
                         <p class="testimonial-author">- Thomas M.</p>
-                    </div>
-                    <div class="testimonial-card">
+                    </li>
+                    <li class="testimonial-card">
                         <div class="testimonial-rating">
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
@@ -257,8 +258,8 @@
                         </div>
                         <p class="testimonial-content">"J'ai offert un abonnement à ma mère qui est une grande amatrice de café. Elle est ravie de découvrir chaque mois un nouveau café d'exception, et moi je suis content de soutenir une entreprise éthique."</p>
                         <p class="testimonial-author">- Julien L.</p>
-                    </div>
-                </div>
+                    </li>
+                </ul>
             </div>
         </section>
     </main>
@@ -269,7 +270,6 @@
 
 
 
-    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 
 
 
@@ -301,8 +301,32 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-logo">
-                    <img src="images/logo.png" alt="Tasse de café" class="logo-img">
+                    <img src="./css/img/logo.png" alt="" aria-hidden="true" class="logo-img">
                     <h2>Café Équitable</h2>
+                    <!-- <button class="btn-newsletter" id="open-newsletter-btn">S’inscrire à la newsletter</button> -->
+                 <!-- Newsletter Popup -->
+                 <div class="newsletter-overlay" id="newsletter-overlay">
+                    <div class="newsletter-popup" role="dialog" aria-modal="true" aria-labelledby="newsletter-title">
+                      <h2 id="newsletter-title">Inscription à la newsletter</h2>
+                      <form id="newsletter-form">
+                        <label for="email">Adresse email (obligatoire)</label><br>
+                        <input type="email" id="email" name="email" required autocomplete="email">
+                        <small>ex : monadresse@mail.com</small><br>
+                    
+                        <label for="mdp">Mot de passe (obligatoire)</label>
+                        <input type="password" id="mdp" name="mdp" required autocomplete="current-password">
+                        <small>8 caractères minimum avec majuscules</small><br>
+                    
+                        <div id="form-error" aria-live="polite" style="color: red; display: none;">
+                          Veuillez remplir tous les champs correctement.
+                        </div>
+                    
+                            <label><input type="checkbox" required> Je confirme l’envoi du formulaire</label><br>
+                    
+                        <button type="submit">Envoyer ma demande</button>
+                      </form>
+                    </div>
+                  </div>
                 </div>
                 <div class="footer-links">
                     <h3>Liens rapides</h3>
@@ -318,12 +342,17 @@
                     <p>Email: info@cafe-equitable.com</p>
                     <p>Téléphone: +33 1 23 45 67 89</p>
                     <div class="social-media">
-                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
-                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a class="reseau" href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                        <a class="reseau" href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a class="reseau" href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
                     </div>
                 </div>
             </div>
+            
+            
+            
+           
+  
             <div class="footer-bottom">
                 <p>&copy; 2025 Café Équitable. Tous droits réservés.</p>
             </div>
@@ -333,7 +362,6 @@
     <!-- <a href="#" class="scroll-top" id="scroll-top">
         <i class="fas fa-arrow-up"></i>
     </a> -->
-
-    <script src="js/main.js"></script>
 </body>
+<script src="./js/newsletter.js"></script>
 </html>

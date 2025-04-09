@@ -13,7 +13,6 @@
 
 
 
-
 * {
     margin: 0;
     padding: 0;
@@ -25,7 +24,7 @@ html {
 }
 
 body {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Actor', sans-serif;
     line-height: 1.6;
     color: var(--text-color);
     background-color: var(--background-color);
@@ -34,6 +33,10 @@ body {
 
 body.menu-open {
     overflow: hidden;
+}
+
+h1,h2{
+    font-family: 'Klee One', cursive;
 }
 
 .container {
@@ -49,9 +52,13 @@ img {
 }
 
 a {
-    text-decoration: none;
+    /* text-decoration: none; */
     color: inherit;
     transition: var(--transition);
+}
+
+a:hover {
+    color: purple;
 }
 
 ul {
@@ -59,7 +66,7 @@ ul {
 }
 
 /* Boutons */
-/* .btn, .btn-secondary {
+.btn, .btn-secondary {
     display: inline-block;
     padding: 12px 24px;
     border-radius: var(--border-radius);
@@ -90,7 +97,14 @@ ul {
     background-color: var(--primary-color);
     color: var(--light-text);
     transform: translateY(-2px);
-} */
+}
+
+
+
+
+
+
+
 
 /* Header styles */
 header {
@@ -130,7 +144,7 @@ header .container {
     color: #114B20;
     font-weight: 600;
     margin: 0;
-    font-family: 'Klee One', cursive;
+
 }
 
 .navMenu {

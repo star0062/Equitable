@@ -1,14 +1,12 @@
 document.addEventListener('DOMContentLoaded', function() {
     const form = document.getElementById('contact-form');
     
-   
     function showError(inputId, message) {
         const errorElement = document.getElementById(inputId + '-error');
         errorElement.textContent = message;
         errorElement.classList.add('active');
         document.getElementById(inputId).setAttribute('aria-invalid', 'true');
     }
-    
     
     function clearError(inputId) {
         const errorElement = document.getElementById(inputId + '-error');
@@ -22,7 +20,7 @@ document.addEventListener('DOMContentLoaded', function() {
         event.preventDefault();
         let isValid = true;
         
-       
+      
         const name = document.getElementById('name');
         if (!name.value.trim()) {
             showError('name', 'Veuillez entrer votre nom.');
@@ -30,7 +28,7 @@ document.addEventListener('DOMContentLoaded', function() {
         } else {
             clearError('name');
         }
-    
+        
         const email = document.getElementById('email');
         const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         if (!email.value.trim()) {
@@ -43,7 +41,6 @@ document.addEventListener('DOMContentLoaded', function() {
             clearError('email');
         }
         
-        
         const phone = document.getElementById('phone');
         const phoneRegex = /^[0-9]{10}$/;
         if (phone.value.trim() && !phoneRegex.test(phone.value)) {
@@ -53,7 +50,6 @@ document.addEventListener('DOMContentLoaded', function() {
             clearError('phone');
         }
         
-        
         const subject = document.getElementById('subject');
         if (subject.value === '' || subject.selectedIndex === 0) {
             showError('subject', 'Veuillez sélectionner un sujet.');
@@ -62,7 +58,6 @@ document.addEventListener('DOMContentLoaded', function() {
             clearError('subject');
         }
         
-      
         const message = document.getElementById('message');
         if (!message.value.trim()) {
             showError('message', 'Veuillez entrer votre message.');
@@ -74,7 +69,6 @@ document.addEventListener('DOMContentLoaded', function() {
             clearError('message');
         }
         
-       
         const consent = document.getElementById('consent');
         if (!consent.checked) {
             showError('consent', 'Vous devez accepter le traitement de vos données pour envoyer le formulaire.');
@@ -83,20 +77,16 @@ document.addEventListener('DOMContentLoaded', function() {
             clearError('consent');
         }
         
-       
         if (isValid) {
-           
+        
             document.getElementById('form-error').hidden = true;
             
             
             setTimeout(function() {
-              
                 document.getElementById('form-success').hidden = false;
-                
-              
+            
                 form.reset();
-                
-               
+              
                 setTimeout(function() {
                     document.getElementById('form-success').hidden = true;
                 }, 5000);
@@ -107,11 +97,11 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
     
-   
+    
     const inputs = form.querySelectorAll('input, select, textarea');
     inputs.forEach(function(input) {
         input.addEventListener('blur', function() {
-           
+            
             switch(input.id) {
                 case 'name':
                     if (!input.value.trim()) {

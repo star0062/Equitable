@@ -5,7 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nos Cafés - Café Équitable</title>
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="./css/header.css">
+    <link rel="stylesheet" href="./css/nos-cafes.css">
+    <link rel="stylesheet" href="./css/newsletter.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://cdn.materialdesignicons.com/7.3.67/css/materialdesignicons.min.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
@@ -14,21 +18,19 @@
     <header>
         <div class="container">
             <div class="logo">
-                <img src="images/logo.png" alt="Tasse de café" class="logo-img">
+                <img class="logo-img" src="./css/img/logo.png" alt="" aria-hidden="true">
                 <h1>Café Équitable</h1>
             </div>
             <div class="menu-toggle" id="mobile-menu">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
+                <span class="mdi mdi-menu"></span>
             </div>
-            <nav>
+            <nav class="navMenu">
                 <ul>
-                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="index.html" >Accueil</a></li>
                     <li><a href="nos-cafes.html" class="active">Nos cafés</a></li>
                     <li><a href="index.html#about">Notre engagement</a></li>
                     <li><a href="index.html#testimonials">Témoignages</a></li>
-                    <li><a href="index.html#contact">Contact</a></li>
+                    <li><a href="#contact">Contact</a></li>
                 </ul>
             </nav>
             <div class="cart-icon" id="cart-icon">
@@ -39,7 +41,7 @@
     </header>
 
     <!-- Panier -->
-    <div class="cart-overlay" id="cart-overlay">
+    <!-- <div class="cart-overlay" id="cart-overlay">
         <div class="cart">
             <div class="cart-header">
                 <h2>Votre panier</h2>
@@ -48,7 +50,7 @@
                 </button>
             </div>
             <div class="cart-items" id="cart-items">
-                <!-- Les articles du panier seront ajoutés ici dynamiquement -->
+                 Les articles du panier seront ajoutés ici dynamiquement 
             </div>
             <div class="cart-footer">
                 <div class="cart-total">
@@ -59,15 +61,15 @@
                 <button class="btn-secondary" id="clear-cart-btn">Vider le panier</button>
             </div>
         </div>
-    </div>
+    </div> -->
 
     <main>
-        <section class="page-header">
+        <!-- <section class="page-header">
             <div class="container">
                 <h2>Nos cafés</h2>
                 <p>Découvrez notre sélection de cafés issus du commerce équitable</p>
             </div>
-        </section>
+        </section> -->
 
         <section class="filters">
             <div class="container">
@@ -111,39 +113,99 @@
 
         <section class="products">
             <div class="container">
-                <div class="products-grid" id="products-container">
-                    <!-- Product cards will be added dynamically -->
-                </div>
+                <h2>Notre sélection de cafés</h2>
+                <!-- <p>Découvrez des cafés issus de coopératives responsables, cultivés dans le respect des producteurs et de la planète.</p> -->
+                <ul class="products-grid">
+                    <li class="product-card">
+                        <img src="./css/img/cafe1.jpg" alt="" aria-hidden="true">
+                        <h3>Café d'Éthiopie</h3>
+                        <p>Notes fruitées et florales, torréfaction <br> légère</p>
+                        <p class="product-price">12,90 €</p>
+                        <button class="btn-secondary " >Ajouter au panier</button>
+                    </li>
+                    <li class="product-card">
+                        <img src="./css/img/cafe2.jpg" alt="" aria-hidden="true">
+                        <h3>Café de Colombie</h3>
+                        <p>Arômes de caramel et de noisette, torréfaction moyenne</p>
+                        <p class="product-price">11,50 €</p>
+                        <button class="btn-secondary " >Ajouter au panier</button>
+                    </li>
+                    <li class="product-card">
+                        <img src="./css/img/cafe3.jpg" alt="" aria-hidden="true">
+                        <h3>Café du Pérou</h3>
+                        <p>Notes chocolatées et épicées, torréfaction foncée</p>
+                        <p class="product-price">10,90 €</p>
+                        <button class="btn-secondary " >Ajouter au panier</button>
+                    </li>
+                    <li class="product-card">
+                        <img src="./css/img/cafe4.jpg" alt="" aria-hidden="true">
+                        <h3>Café de Guatemala</h3>
+                        <p>Notes fruitées et florales, torréfaction <br> légère</p>
+                        <p class="product-price">11,90 €</p>
+                        <button class="btn-secondary " >Ajouter au panier</button>
+                    </li>
+                    <li class="product-card">
+                        <img src="./css/img/cafe5.jpg" alt="" aria-hidden="true">
+                        <h3>Café de Honduras</h3>
+                        <p>Arômes de caramel et de noisette, torréfaction moyenne</p>
+                        <p class="product-price">11,30 €</p>
+                        <button class="btn-secondary " >Ajouter au panier</button>
+                    </li>
+                    <li class="product-card">
+                        <img src="./css/img/cafe6.jpg" alt="" aria-hidden="true">
+                        <h3>Café du Pérou</h3>
+                        <p>Notes chocolatées et épicées, torréfaction foncée</p>
+                        <p class="product-price">9,90 €</p>
+                        <button class="btn-secondary " >Ajouter au panier</button>
+                    </li>
+                </ul>
+                </ul>
             </div>
         </section>
-
-        <!-- Product Popup -->
-        <div class="product-popup-overlay" id="product-popup-overlay">
-            <div class="product-popup">
-                <button class="close-popup" id="close-popup">
-                    <i class="fas fa-times"></i>
-                </button>
-                <div id="popup-content">
-                    <!-- Product details will be inserted here -->
-                </div>
-            </div>
-        </div>
+        
     </main>
+
+
+
 
     <footer id="contact">
         <div class="container">
             <div class="footer-content">
                 <div class="footer-logo">
-                    <img src="images/logo.png" alt="Tasse de café" class="logo-img">
+                    <img src="./css/img/logo.png" alt="" aria-hidden="true" class="logo-img">
                     <h2>Café Équitable</h2>
+                    <!-- <button class="btn-newsletter" id="open-newsletter-btn">S’inscrire à la newsletter</button> -->
+                 <!-- Newsletter Popup -->
+                 <div class="newsletter-overlay" id="newsletter-overlay">
+                    <div class="newsletter-popup" role="dialog" aria-modal="true" aria-labelledby="newsletter-title">
+                      <h2 id="newsletter-title">Inscription à la newsletter</h2>
+                      <form id="newsletter-form">
+                        <label for="email">Adresse email (obligatoire)</label><br>
+                        <input type="email" id="email" name="email" required autocomplete="email">
+                        <small>ex : monadresse@mail.com</small><br>
+                    
+                        <label for="mdp">Mot de passe (obligatoire)</label>
+                        <input type="password" id="mdp" name="mdp" required autocomplete="current-password">
+                        <small>8 caractères minimum avec majuscules</small><br>
+                    
+                        <div id="form-error" aria-live="polite" style="color: red; display: none;">
+                          Veuillez remplir tous les champs correctement.
+                        </div>
+                    
+                            <label><input type="checkbox" required> Je confirme l’envoi du formulaire</label><br>
+                    
+                        <button type="submit">Envoyer ma demande</button>
+                      </form>
+                    </div>
+                  </div>
                 </div>
                 <div class="footer-links">
                     <h3>Liens rapides</h3>
                     <ul>
                         <li><a href="index.html">Accueil</a></li>
                         <li><a href="nos-cafes.html">Nos cafés</a></li>
-                        <li><a href="index.html#about">Notre engagement</a></li>
-                        <li><a href="index.html#testimonials">Témoignages</a></li>
+                        <li><a href="#about">Notre engagement</a></li>
+                        <li><a href="#testimonials">Témoignages</a></li>
                     </ul>
                 </div>
                 <div class="footer-contact">
@@ -151,22 +213,26 @@
                     <p>Email: info@cafe-equitable.com</p>
                     <p>Téléphone: +33 1 23 45 67 89</p>
                     <div class="social-media">
-                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
-                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a class="reseau" href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                        <a class="reseau" href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a class="reseau" href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
                     </div>
                 </div>
             </div>
+            
+            
+            
+           
+  
             <div class="footer-bottom">
                 <p>&copy; 2025 Café Équitable. Tous droits réservés.</p>
             </div>
         </div>
     </footer>
 
-    <a href="#" class="scroll-top" id="scroll-top">
+    <!-- <a href="#" class="scroll-top" id="scroll-top">
         <i class="fas fa-arrow-up"></i>
-    </a>
+    </a> -->
 
-    <script src="js/main.js"></script>
 </body>
 </html>

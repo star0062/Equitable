@@ -32,18 +32,15 @@ cafe-equitable/
 ├── nos-cafes.html          # Page des produits
 │
 ├── css/
-│   └── styles.css          # Styles du site
-│
-├── js/
-│   └── main.js             # Fonctionnalités JavaScript
-│
-├── images/                 # Dossier des images
-│   ├── logo.png
-│   ├── hero-bg.jpg
-│   ├── engagement.jpg
-│   ├── cafe1.jpg
-│   ├── cafe2.jpg
-│   └── ...
+|   ├── img/                 # Dossier des images
+|   │   ├── logo.png
+|   │   ├── hero-bg.jpg
+|   │   ├── engagement.jpg
+|   │   ├── cafe1.jpg
+|   │   ├── cafe2.jpg
+|   │   └── ...
+|   ├──styles.css     # Styles du site
+│   └── ...  
 │
 └── README.md               # Documentation du projet
 ```

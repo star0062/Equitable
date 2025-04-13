@@ -1,0 +1,139 @@
+/* Réinitialisation et style de base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #333;
+}
+
+.conteneur {
+    max-width: 450px;
+    margin: 0 auto;
+    background-color: #006128;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Style de l'en-tête */
+header {
+    background-color: #e5d3b3;
+    display: flex;
+    align-items: center;
+    padding: 15px;
+}
+
+.icone-menu {
+    margin-right: 15px;
+    font-size: 24px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.icone-cafe {
+    margin-right: 10px;
+}
+
+.icone-cafe img {
+    width: 40px;
+    height: 40px;
+}
+
+.titre {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.babies {
+    background-color: #ff69b4;
+    padding: 0 5px;
+    color: white;
+    font-size: 18px;
+    border-radius: 3px;
+}
+
+/* Style de la section produits */
+.section-produits {
+    flex-grow: 1;
+    padding: 10px;
+}
+
+.entete-produits {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    color: white;
+}
+
+.icones-entete {
+    display: flex;
+    gap: 15px;
+    font-size: 24px;
+}
+
+.grille-produits {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
+.carte-produit {
+    aspect-ratio: 1/1;
+    background-color: #e5d3b3;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    border-radius: 2px;
+    overflow: hidden;
+    position: relative;
+}
+
+.carte-produit img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+}
+
+.nom-produit {
+    padding: 8px;
+    position: relative;
+    z-index: 1;
+    background-color: rgba(229, 211, 179, 0.7);
+}
+
+/* Style du pied de page */
+footer {
+    background-color: #e5d3b3;
+    padding: 10px;
+}
+
+.liens-footer {
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+}
+
+.element-footer {
+    text-align: center;
+}
+
+/* Ajustements responsifs */
+@media (max-width: 450px) {
+    .liens-footer {
+        flex-wrap: wrap;
+    }
+    
+    .element-footer {
+        flex: 1 0 40%;
+        margin: 2px 0;
+    }
+}

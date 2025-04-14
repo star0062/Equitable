@@ -382,7 +382,6 @@ header .container {
 
 /* Menu burger pour mobile */
 .menu-toggle {
-    display: none;
     flex-direction: column;
     justify-content: space-between;
     width: 30px;

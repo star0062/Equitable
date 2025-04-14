@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Café Équitable - Commerce équitable et éthique</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="images/logo.png" alt="Tasse de café" class="logo-img">
+                <h1>Café Équitable</h1>
+            </div>
+            <div class="menu-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html" class="active">Accueil</a></li>
+                    <li><a href="nos-cafes.html">Nos cafés</a></li>
+                    <li><a href="#about">Notre engagement</a></li>
+                    <li><a href="#testimonials">Témoignages</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="cart-icon" id="cart-icon">
+                <i class="fas fa-shopping-cart"></i>
+                <span class="cart-count">0</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Panier -->
+    <div class="cart-overlay" id="cart-overlay">
+        <div class="cart">
+            <div class="cart-header">
+                <h2>Votre panier</h2>
+                <!-- <button class="close-cart" id="close-cart">
+                    <i class="fas fa-times"></i>
+                </button> -->
+            </div>
+            <div class="cart-items" id="cart-items">
+                <!-- Les articles du panier seront ajoutés ici dynamiquement -->
+            </div>
+            <div class="cart-footer">
+                <div class="cart-total">
+                    <h3>Total:</h3>
+                    <span id="cart-total-price">0,00 €</span>
+                </div>
+                <button class="btn" id="checkout-btn">Passer la commande</button>
+                <button class="btn-secondary" id="clear-cart-btn">Vider le panier</button>
+            </div>
+        </div>
+    </div>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <h2>Découvrez des cafés éthiques et savoureux</h2>
+                <p>Une expérience gustative exceptionnelle qui respecte les producteurs et l'environnement</p>
+                <a href="nos-cafes.html" class="btn">Découvrir nos cafés</a>
+            </div>
+        </section>
+
+        <section id="about" class="about">
+            <div class="container">
+                <h2>Notre engagement éthique</h2>
+                <div class="about-content">
+                    <div class="about-text">
+                        <p>Chez Café Équitable, nous croyons fermement que le commerce doit être juste et équitable pour tous les acteurs de la chaîne de production.</p>
+                        <p>Notre objectif est de mettre en avant notre engagement éthique tout en facilitant la vente en ligne.</p>
+                        <p>Nous travaillons directement avec des coopératives de producteurs de café pour garantir :</p>
+                        <ul>
+                            <li>Des prix justes pour les agriculteurs</li>
+                            <li>Des conditions de travail dignes</li>
+                            <li>Des pratiques agricoles respectueuses de l'environnement</li>
+                            <li>Une qualité exceptionnelle pour nos clients</li>
+                        </ul>
+                    </div>
+                    <div class="about-image">
+                        <img src="images/engagement.jpg" alt="Producteur de café équitable">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="featured-products">
+            <div class="container">
+                <h2>Nos produits phares</h2>
+                <div class="products-grid">
+                    <div class="product-card">
+                        <img src="images/cafe1.jpg" alt="Café d'Éthiopie">
+                        <h3>Café d'Éthiopie</h3>
+                        <!-- <p>Notes fruitées et florales, torréfaction légère</p> -->
+                        <!-- <p class="product-price">12,90 €</p> -->
+                        <!-- <button class="btn-secondary add-to-cart" data-id="1" data-name="Café d'Éthiopie" data-price="12.90" data-image="images/cafe1.jpg">Ajouter au panier</button> -->
+                    </div>
+                    <div class="product-card">
+                        <img src="images/cafe2.jpg" alt="Café de Colombie">
+                        <h3>Café de Colombie</h3>
+                        <!-- <p>Arômes de caramel et de noisette, torréfaction moyenne</p> -->
+                        <!-- <p class="product-price">11,50 €</p> -->
+                        <!-- <button class="btn-secondary add-to-cart" data-id="2" data-name="Café de Colombie" data-price="11.50" data-image="images/cafe2.jpg">Ajouter au panier</button> -->
+                    </div>
+                    <div class="product-card">
+                        <img src="images/cafe3.jpg" alt="Café du Pérou">
+                        <h3>Café du Pérou</h3>
+                        <!-- <p>Notes chocolatées et épicées, torréfaction foncée</p> -->
+                        <p class="product-price">10,90 €</p>
+                        <!-- <button class="btn-secondary add-to-cart" data-id="3" data-name="Café du Pérou" data-price="10.90" data-image="images/cafe3.jpg">Ajouter au panier</button> -->
+                    </div>
+                </div>
+                <div class="text-center">
+                    <a href="nos-cafes.html" class="btn">Voir tous nos cafés</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="testimonials" class="testimonials">
+            <div class="container">
+                <h2>Ce que nos clients disent</h2>
+                <div class="testimonials-grid">
+                    <div class="testimonial-card">
+                        <div class="testimonial-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p class="testimonial-content">"J'ai découvert Café Équitable il y a 6 mois et je ne peux plus m'en passer. Leurs cafés sont d'une qualité exceptionnelle et j'apprécie particulièrement leur engagement éthique."</p>
+                        <p class="testimonial-author">- Sophie D.</p>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="testimonial-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <p class="testimonial-content">"En tant que torréfacteur amateur, je suis très exigeant sur la qualité des grains. Café Équitable propose des cafés verts d'exception, avec une traçabilité irréprochable."</p>
+                        <p class="testimonial-author">- Thomas M.</p>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="testimonial-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p class="testimonial-content">"J'ai offert un abonnement à ma mère qui est une grande amatrice de café. Elle est ravie de découvrir chaque mois un nouveau café d'exception, et moi je suis content de soutenir une entreprise éthique."</p>
+                        <p class="testimonial-author">- Julien L.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer id="contact">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="images/logo.png" alt="Tasse de café" class="logo-img">
+                    <h2>Café Équitable</h2>
+                </div>
+                <div class="footer-links">
+                    <h3>Liens rapides</h3>
+                    <ul>
+                        <li><a href="index.html">Accueil</a></li>
+                        <li><a href="nos-cafes.html">Nos cafés</a></li>
+                        <li><a href="#about">Notre engagement</a></li>
+                        <li><a href="#testimonials">Témoignages</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h3>Contact</h3>
+                    <p>Email: info@cafe-equitable.com</p>
+                    <p>Téléphone: +33 1 23 45 67 89</p>
+                    <div class="social-media">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Café Équitable. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- <a href="#" class="scroll-top" id="scroll-top">
+        <i class="fas fa-arrow-up"></i>
+    </a> -->
+
+    <script src="js/main.js"></script>
+</body>
+</html>
